@@ -17,6 +17,11 @@ android {
         targetSdk = Constants.targetSdk
         versionCode = Constants.versionCode
         versionName = Constants.versionName
+        externalNativeBuild {
+            cmake {
+                cppFlags += "-std=c++17"
+            }
+        }
     }
 
     buildTypes {
@@ -38,6 +43,12 @@ android {
     buildFeatures {
         dataBinding = true
         viewBinding = true
+    }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.10.2"
+        }
     }
 }
 
