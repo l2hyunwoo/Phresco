@@ -30,10 +30,10 @@
             android:layout_marginHorizontal="12dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_feed_title"
-            app:spanCount="3"
+            app:spanCount="2"
             tools:itemCount="6"
             tools:listitem="@layout/item_feed_image" />
 

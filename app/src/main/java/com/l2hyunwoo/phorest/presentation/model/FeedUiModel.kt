@@ -1,0 +1,15 @@
+package com.l2hyunwoo.phorest.presentation.model
+
+import com.google.gson.annotations.SerializedName
+import com.l2hyunwoo.phorest.data.model.ImageModel
+
+data class FeedUiModel(
+    val id: Int,
+    val author: String,
+    val width: Int,
+    val height: Int,
+    val url: String,
+    val downloadUrl: String
+)
+
+fun ImageModel.toFeedUiModel() = FeedUiModel(id, author, width, height, url, downloadUrl)

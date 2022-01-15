@@ -8,7 +8,9 @@ import com.l2hyunwoo.phorest.core.base.BindingActivity
 import com.l2hyunwoo.phorest.databinding.ActivityGalleryBinding
 import com.l2hyunwoo.phorest.presentation.gallery.subscreen.FavoriteFragment
 import com.l2hyunwoo.phorest.presentation.gallery.subscreen.FeedFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GalleryActivity : BindingActivity<ActivityGalleryBinding>(R.layout.activity_gallery) {
     private val viewModel by viewModels<GalleryViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {

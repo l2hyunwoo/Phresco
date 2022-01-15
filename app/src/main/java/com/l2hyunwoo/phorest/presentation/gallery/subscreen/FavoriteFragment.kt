@@ -13,7 +13,7 @@ class FavoriteFragment : BindingFragment<FragmentFavoriteBinding>(R.layout.fragm
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 }

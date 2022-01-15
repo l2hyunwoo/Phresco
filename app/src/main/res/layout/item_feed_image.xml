@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/img_feed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxHeight="360dp"
+        android:scaleType="centerCrop"
         android:adjustViewBounds="true"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_star" />
