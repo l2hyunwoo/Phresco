@@ -50,6 +50,9 @@ dependencies {
     implementation(AndroidXDependencies.lifeCycleKtx)
     implementation(AndroidXDependencies.lifecycleJava8)
 
+    // Material Design
+    implementation(MaterialDesignDependencies.materialDesign)
+
     // Third-Party
     implementation(ThirdPartyDependencies.glide)
     kapt(KaptDependencies.glide)
