@@ -21,7 +21,7 @@
                 android:value="androidx.startup" />
         </provider>
         <activity
-            android:name=".presentation.GalleryActivity"
+            android:name=".presentation.gallery.GalleryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
