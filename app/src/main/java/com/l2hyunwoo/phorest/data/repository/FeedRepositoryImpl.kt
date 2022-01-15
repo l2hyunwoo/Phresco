@@ -2,7 +2,6 @@ package com.l2hyunwoo.phorest.data.repository
 
 import com.l2hyunwoo.phorest.data.local.dao.FavoriteImageDao
 import com.l2hyunwoo.phorest.domain.entity.Image
-import com.l2hyunwoo.phorest.domain.entity.toImageEntity
 import com.l2hyunwoo.phorest.domain.repository.FeedRepository
 import javax.inject.Inject
 

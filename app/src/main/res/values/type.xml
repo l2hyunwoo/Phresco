@@ -22,6 +22,7 @@
 
     <style name="TextAppearance.Phorest.SubTitle">
         <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
         <item name="android:textSize">20sp</item>
     </style>
 

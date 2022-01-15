@@ -1,6 +1,7 @@
 package com.l2hyunwoo.phorest.config.di
 
 import com.l2hyunwoo.phorest.data.api.FeedService
+import com.l2hyunwoo.phorest.data.api.ImageLoadService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,5 +15,11 @@ import javax.inject.Singleton
 object ServiceModule {
     @Provides
     @Singleton
-    fun provideFeedService(retrofit: Retrofit) = retrofit.create(FeedService::class.java)
+    fun provideFeedService(retrofit: Retrofit): FeedService =
+        retrofit.create(FeedService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideImageLoadService(retrofit: Retrofit): ImageLoadService =
+        retrofit.create(ImageLoadService::class.java)
 }
