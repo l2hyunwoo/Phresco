@@ -18,6 +18,9 @@ object AndroidXDependencies {
         "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycleVersion}"
     const val startUp = "androidx.startup:startup-runtime:${Versions.startupVersion}"
     const val paging = "androidx.paging:paging-runtime:${Versions.pagingVersion}"
+    const val room = "androidx.room:room-runtime:${Versions.roomVersion}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
+    const val roomPaging = "androidx.room:room-paging:${Versions.roomVersion}"
 }
 
 object TestDependencies {
@@ -37,6 +40,7 @@ object MaterialDesignDependencies {
 object KaptDependencies {
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hiltVersion}"
     const val glide = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
+    const val room = "androidx.room:room-compiler:${Versions.roomVersion}"
 }
 
 object ThirdPartyDependencies {

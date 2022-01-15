@@ -14,6 +14,7 @@ object Versions {
     const val lifecycleVersion = "2.4.0"
     const val startupVersion = "1.1.0"
     const val pagingVersion = "3.1.0"
+    const val roomVersion = "2.4.1"
 
     const val gradleVersion = "7.0.4"
     const val glideVersion = "4.12.0"

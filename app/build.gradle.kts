@@ -22,6 +22,15 @@ android {
                 cppFlags += "-std=c++17"
             }
         }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += mapOf(
+                    "room.schemaLocation" to "$projectDir/schemas",
+                    "room.incremental" to "true",
+                    "room.expandProjection" to "true"
+                )
+            }
+        }
     }
 
     buildTypes {
@@ -70,6 +79,10 @@ dependencies {
     implementation(AndroidXDependencies.lifecycleJava8)
     implementation(AndroidXDependencies.startUp)
     implementation(AndroidXDependencies.paging)
+    implementation(AndroidXDependencies.room)
+    implementation(AndroidXDependencies.roomKtx)
+    implementation(AndroidXDependencies.roomPaging)
+    kapt(KaptDependencies.room)
 
     // DI: Dagger-Hilt
     implementation(AndroidXDependencies.hilt)
