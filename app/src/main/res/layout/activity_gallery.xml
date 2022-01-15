@@ -16,7 +16,11 @@
             android:id="@+id/bnv_main"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:background="?attr/colorSurface"
+            app:itemIconTint="@color/bnv_main_item_tint"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/phorest_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
