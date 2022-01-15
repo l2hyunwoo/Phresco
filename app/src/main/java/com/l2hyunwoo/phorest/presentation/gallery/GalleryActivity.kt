@@ -1,6 +1,7 @@
 package com.l2hyunwoo.phorest.presentation.gallery
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.annotation.IdRes
 import com.l2hyunwoo.phorest.R
 import com.l2hyunwoo.phorest.core.base.BindingActivity
@@ -9,17 +10,21 @@ import com.l2hyunwoo.phorest.presentation.gallery.subscreen.FavoriteFragment
 import com.l2hyunwoo.phorest.presentation.gallery.subscreen.FeedFragment
 
 class GalleryActivity : BindingActivity<ActivityGalleryBinding>(R.layout.activity_gallery) {
+    private val viewModel by viewModels<GalleryViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container_main, FeedFragment())
-            .commit()
+        loadFragment(viewModel.currentScreenItemId)
         binding.bnvMain.setOnItemSelectedListener {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container_main, createFragmentOf(it.itemId))
-                .commit()
+            loadFragment(it.itemId)
+            viewModel.currentScreenItemId = it.itemId
             true
         }
+    }
+
+    private fun loadFragment(@IdRes itemId: Int) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container_main, createFragmentOf(itemId))
+            .commit()
     }
 
     private fun createFragmentOf(@IdRes itemId: Int) = when (itemId) {
