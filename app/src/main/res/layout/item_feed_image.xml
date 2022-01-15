@@ -17,17 +17,5 @@
             android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/ic_star" />
-
-        <ImageButton
-            android:id="@+id/btn_feed_favorite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="12dp"
-            android:background="@null"
-            android:checked="false"
-            android:src="@drawable/state_favorite_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
