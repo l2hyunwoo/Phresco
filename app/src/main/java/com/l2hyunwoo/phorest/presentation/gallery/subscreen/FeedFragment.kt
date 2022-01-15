@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager.GAP_HANDLING_NONE
 import com.l2hyunwoo.phorest.R
 import com.l2hyunwoo.phorest.core.base.BindingFragment
+import com.l2hyunwoo.phorest.core.view.PagingLoadStateAdapter
 import com.l2hyunwoo.phorest.databinding.FragmentFeedBinding
 import com.l2hyunwoo.phorest.presentation.gallery.adapter.FeedAdapter
+import com.l2hyunwoo.phorest.presentation.gallery.util.FeedGridItemDecoration
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -24,7 +26,12 @@ class FeedFragment : BindingFragment<FragmentFeedBinding>(R.layout.fragment_feed
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         feedAdapter = FeedAdapter(requireContext())
-        binding.rvFeedImages.adapter = feedAdapter
+        with(binding.rvFeedImages) {
+            adapter = feedAdapter?.withLoadStateFooter(
+                footer = PagingLoadStateAdapter { feedAdapter?.retry() }
+            )
+            addItemDecoration(FeedGridItemDecoration(12))
+        }
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.feedList
                 .flowWithLifecycle(viewLifecycleOwner.lifecycle)

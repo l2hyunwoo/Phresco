@@ -1,10 +1,6 @@
 package com.l2hyunwoo.phorest.core.view
 
 import android.view.View
-import android.widget.ImageView
-import androidx.annotation.DrawableRes
-import androidx.recyclerview.widget.DiffUtil
-import com.bumptech.glide.Glide
 
 /*
 * Created By Nunu Lee
@@ -22,17 +18,4 @@ inline fun View.setOnSingleClickListener(
             previousClickedTime = clickedTime
         }
     }
-}
-
-class ItemDiffCallback<T>(
-    val onItemsTheSame: (T, T) -> Boolean,
-    val onContentsTheSame: (T, T) -> Boolean
-) : DiffUtil.ItemCallback<T>() {
-    override fun areItemsTheSame(
-        oldItem: T, newItem: T
-    ): Boolean = onItemsTheSame(oldItem, newItem)
-
-    override fun areContentsTheSame(
-        oldItem: T, newItem: T
-    ): Boolean = onContentsTheSame(oldItem, newItem)
 }
