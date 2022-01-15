@@ -4,7 +4,7 @@ object Versions {
     const val kotlinVersion = "1.5.31"
     const val coreKtxVersion = "1.7.0"
     const val appCompatVersion = "1.4.0"
-    const val materialDesignVersion = "1.4.0"
+    const val materialDesignVersion = "1.5.0"
     const val constraintLayoutVersion = "2.1.2"
     const val legacySupportVersion = "1.0.0"
     const val hiltVersion = "2.38.1"
