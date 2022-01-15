@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("kapt")
     id("de.mannodermaus.android-junit5")
@@ -10,11 +10,11 @@ android {
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
-        applicationId = Constants.packageName
         minSdk = Constants.minSdk
         targetSdk = Constants.targetSdk
-        versionCode = Constants.versionCode
-        versionName = Constants.versionName
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
