@@ -33,7 +33,9 @@
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_feed_title"
-            app:spanCount="3" />
+            app:spanCount="3"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_feed_image" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
