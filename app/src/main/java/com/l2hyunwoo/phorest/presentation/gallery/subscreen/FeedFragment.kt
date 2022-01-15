@@ -33,7 +33,6 @@ class FeedFragment : BindingFragment<FragmentFeedBinding>(R.layout.fragment_feed
 
             override fun rootClick(id: Int) {
                 startActivity(DetailActivity.getIntent(requireContext(), id))
-                toast("Click ${id}")
             }
         }
 
