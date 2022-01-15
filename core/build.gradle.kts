@@ -49,6 +49,7 @@ dependencies {
     implementation(AndroidXDependencies.coroutines)
     implementation(AndroidXDependencies.lifeCycleKtx)
     implementation(AndroidXDependencies.lifecycleJava8)
+    implementation(AndroidXDependencies.paging)
 
     // Material Design
     implementation(MaterialDesignDependencies.materialDesign)

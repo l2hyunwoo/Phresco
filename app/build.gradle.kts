@@ -69,6 +69,7 @@ dependencies {
     implementation(AndroidXDependencies.lifeCycleKtx)
     implementation(AndroidXDependencies.lifecycleJava8)
     implementation(AndroidXDependencies.startUp)
+    implementation(AndroidXDependencies.paging)
 
     // DI: Dagger-Hilt
     implementation(AndroidXDependencies.hilt)

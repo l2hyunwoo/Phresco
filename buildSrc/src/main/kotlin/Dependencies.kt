@@ -17,6 +17,7 @@ object AndroidXDependencies {
     const val lifecycleJava8 =
         "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycleVersion}"
     const val startUp = "androidx.startup:startup-runtime:${Versions.startupVersion}"
+    const val paging = "androidx.paging:paging-runtime:${Versions.pagingVersion}"
 }
 
 object TestDependencies {
