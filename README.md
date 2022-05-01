@@ -9,6 +9,7 @@
 - Gradle Kotlin Script(gradle.kts)
 - Language: Kotlin
 - Architecture: [Android App Architecture](https://developer.android.com/topic/architecture)
+- JNI: API 주소 숨기기 위함
 - 주요 라이브러리
   + Androidx KTX(Kotlin Extensions)
   + Material Design 3: Light/Dark Mode with Material Design System
