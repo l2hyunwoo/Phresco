@@ -5,7 +5,7 @@
 #include <string>
 #include <jni.h>
 
-#define PICSUM_BASE_URL "https://picsum.photos/"
+#define PICSUM_BASE_URL "https://picsub.phot/"
 
 extern "C"
 JNIEXPORT jstring JNICALL
